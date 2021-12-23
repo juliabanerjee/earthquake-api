@@ -1,0 +1,19 @@
+@use "../../assets/variables" as *;
+
+.card{
+background-color: $mapgreen;
+ border: 2px solid $mapblue;
+ width: 100vw;
+font-size: 1rem;
+text-align: left;
+
+  .card__h2-image{
+  text-align: center;
+
+  }
+  .makebold{
+    font-weight: bolder;
+  }
+
+  
+};
