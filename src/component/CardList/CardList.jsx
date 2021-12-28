@@ -3,7 +3,7 @@ import "./CardList.scss";
 import Card from "../Card/Card";
 import { useState, useEffect } from "react";
 
-const CardList = (props) =>{
+const CardList = () =>{
 
 //mapping the earthquakes into individual cards
 const [earthquakeArr, setEarthquakeArr] = useState([]);
@@ -36,8 +36,7 @@ const [earthquakeArr, setEarthquakeArr] = useState([]);
   }, []);
 
   const earthquakeJsx = earthquakeArr.map((earthquake, index) => {
-    // console.log(earthquake[0].properties.tsunami)
-    // console.log("on the console")
+
     return <Card key={index + "earthquake"} location={earthquake.properties.place}
     magnitude={earthquake.properties.mag}
     tsunami={earthquake.properties.tsunami} furtherInfo = {earthquake.properties.url}/>
@@ -49,10 +48,12 @@ const [earthquakeArr, setEarthquakeArr] = useState([]);
 
 
   return(
-    <div>{earthquakeJsx}</div>
-// location={earthquakeArr.properties.place}
-//     magnitude={earthquakeArr.properties.mag}
-//     tsunami={earthquakeArr.properties.tsunami}
+    <div>
+      
+      {earthquakeJsx}
+      
+    </div>
+
 
   );
 };

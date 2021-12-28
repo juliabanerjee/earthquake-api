@@ -21,7 +21,7 @@ const {location, magnitude, tsunami, furtherInfo} = props;
 
 <p><span className="make-bold">Magnitude:</span> {magnitude}</p>
 <p><span className="make-bold">Tsunami: </span> {tsunami}</p>
-<p><span className="make-bold">Further Info:</span> {furtherInfo}</p>
+<p>Further Info: <span className="elipsis">{furtherInfo}</span></p>
 
 </div>
 
