@@ -1,5 +1,5 @@
-@use "../../assets/variables" as *;
-
+@use "../../assets/_variables" as *;
+@use "../../assets/_reset" as *;
 .card{
 background-color: $mapgreen;
 border: 2px solid $mapblue;

@@ -9,9 +9,12 @@ const App = () => {
     
     
     <div className="App">
+      <div className="h1">
     <h1 className="app__h1">Earthquakes</h1>
-      
+    </div>
+    
       <CardList/>
+     
     </div>
     
     );

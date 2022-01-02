@@ -5,18 +5,19 @@ import { useState, useEffect } from "react";
 
 const CardList = () =>{
 
-//mapping the earthquakes into individual cards
+
 const [earthquakeArr, setEarthquakeArr] = useState([]);
+// const [minMagnitude, setMinMagnitude] = useState(1);
+
   console.log(earthquakeArr);
 
-  const isOldData = false;
-  const isSerious = true;
-
   const fetchEarthquakeData = () => {
-    const startTime = isOldData ? "2021-11-19" : "2021-11-20";
-    const addMinMagnitude = isSerious && "&minmagnitude=6";
-
-    const url = `https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=${startTime}&endtime=2021-12-20${addMinMagnitude}&limit=20000`;
+    
+    // const handleMinMagnitude = (event) =>{
+    //   setMinMagnitude(event.target.value);
+    //   }
+    //${minMagnitude}
+    const url = `https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2020-01-01&endtime=2020-02-01&minmagnitude=6&limit=20000`;
 
     fetch(url)
       .then((response) => {
@@ -34,7 +35,7 @@ const [earthquakeArr, setEarthquakeArr] = useState([]);
   useEffect(() => {
     fetchEarthquakeData();
   }, []);
-
+//mapping the earthquakes into individual cards
   const earthquakeJsx = earthquakeArr.map((earthquake, index) => {
 
     return <Card key={index + "earthquake"} location={earthquake.properties.place}
@@ -48,8 +49,8 @@ const [earthquakeArr, setEarthquakeArr] = useState([]);
 
 
   return(
-    <div>
-      
+    <div className="cardList">
+     {/* <label htmlFor="">Magnitude greater than <input type="range" min="0" max="10" step="1" onChange={handleMinMagnitude} value={minMagnitude}/> </label>  */}
       {earthquakeJsx}
       
     </div>

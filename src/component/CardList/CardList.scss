@@ -1,6 +1,7 @@
 @use "../../assets/variables" as *;
+@use "../../assets/reset" as *;
 
-div{
+.cardList{
 
   display: flex;
   gap: 10px;

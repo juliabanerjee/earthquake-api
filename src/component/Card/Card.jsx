@@ -19,9 +19,10 @@ const {location, magnitude, tsunami, furtherInfo} = props;
 <img src={epicentre} alt="earthquake epicentre diagram" className="card__image"/>
 </div>
 
-<p><span className="make-bold">Magnitude:</span> {magnitude}</p>
+<p ><span className="make-bold">Magnitude:</span> {magnitude}</p>
 <p><span className="make-bold">Tsunami: </span> {tsunami}</p>
-<p>Further Info: <span className="elipsis">{furtherInfo}</span></p>
+<p>Further Info: <a className="elipsis" href={furtherInfo}>{furtherInfo}</a></p>
+
 
 </div>
 
