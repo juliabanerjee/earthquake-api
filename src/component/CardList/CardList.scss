@@ -4,6 +4,35 @@
 .cardList{
 
   display: flex;
+  justify-content: center;
   gap: 10px;
   flex-wrap: wrap;
+
+  &__filters{
+    display: flex;
+    justify-content: center;
+    // flex-wrap: wrap;
+    width: 100vw;
+    padding: 0.5rem;
+    border: 1px solid grey;
+   .cardList__filters__magnitude{
+     margin-right: 2rem;
+   }
+  }
+}
+
+@media only screen and (min-width: 768px){
+.cardList{
+  &__filters{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100vw;
+    padding: 2rem;
+    border: 1px solid grey;
+   .cardList__filters__magnitude{
+     margin-right: 2rem;
+   }
+  }
+}
 }

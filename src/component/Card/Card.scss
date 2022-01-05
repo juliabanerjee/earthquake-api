@@ -7,18 +7,33 @@ width: 100vw;
 height: 60vh;
 font-size: 1rem;
 text-align: left;
+border-radius: 10px;
 
-  .card__h2-image{
+  .card__section1{
+    height: 38vh;
   text-align: center;
-
+&__image{
+  margin-top: 1rem;
+  height: 200px;
+  width: 200px;
+}
+&__h2{
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
 
   }
-.elipsis{
+  .card__p{
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 1rem;
+  }
+.card__further-info{
   overflow-wrap: break-word;
+  color: blue;
 
   &:hover{
-    color: blue;
-    text-decoration: underline;
+    color: white;
     cursor: grab;
   }
 }
@@ -31,6 +46,11 @@ text-align: left;
   .card{
 
     width: 20vw;
+    height: 50vh;
+
+    .card__section1{
+      height: 30vh
+    }
   }
   
 }
