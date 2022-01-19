@@ -8,6 +8,7 @@ const CardList = () =>{
 
 const [earthquakeArr, setEarthquakeArr] = useState([]);
 const [minMagnitude, setMinMagnitude] = useState(1);
+const [orderByMagnitude, setOrderByMagnitude] = useState(false);
 
   console.log(earthquakeArr);
 
@@ -41,12 +42,22 @@ const [minMagnitude, setMinMagnitude] = useState(1);
     tsunami={earthquake.properties.tsunami} furtherInfo = {earthquake.properties.url}/>
     
   });
-
+//function for range bar
   const handleMinMagnitude = (event) =>{
     setMinMagnitude(event.target.value);
     };
 
-
+    //function for checkbox
+    const handleOrderByMagnitude = (event) =>{
+      if(orderByMagnitude === true ){
+        !setOrderByMagnitude
+        console.log("it is false")
+      } else{
+        !setOrderByMagnitude
+        console.log("it is true")
+      }
+      // setOrderByMagnitude(event.target.value)
+    }
 
   return(
     <div className="cardList">
@@ -54,6 +65,7 @@ const [minMagnitude, setMinMagnitude] = useState(1);
      <label className="cardList__filters__magnitude" htmlFor="">Magnitude is {minMagnitude} and above <input type="range" min="0" max="10" step="1" onChange={handleMinMagnitude} value={minMagnitude}/> </label> 
      <p className="cardList__filters__display">Currently displaying {earthquakeArr.length} results</p>
      </div>
+     <label htmlFor="">Order by magnitude <input type="checkbox" onToggle={handleOrderByMagnitude} /></label>
       {earthquakeJsx}
       
     </div>
