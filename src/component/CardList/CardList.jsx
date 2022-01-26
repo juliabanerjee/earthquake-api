@@ -11,7 +11,7 @@ const [minMagnitude, setMinMagnitude] = useState(1);
 // const [orderByMagnitude, setOrderByMagnitude] = useState(false);
 
   console.log(earthquakeArr);
-
+  useEffect(() => {
   const fetchEarthquakeData = () => {
     
     
@@ -31,7 +31,7 @@ const [minMagnitude, setMinMagnitude] = useState(1);
       
   };
 
-  useEffect(() => {
+  
     fetchEarthquakeData();
   }, [minMagnitude]);
 //mapping the earthquakes into individual cards
@@ -65,7 +65,7 @@ const [minMagnitude, setMinMagnitude] = useState(1);
      <label className="cardList__filters__magnitude" htmlFor="">Magnitude is {minMagnitude} and above <input type="range" min="0" max="10" step="1" onChange={handleMinMagnitude} value={minMagnitude}/> </label> 
      <p className="cardList__filters__display">Currently displaying {earthquakeArr.length} results</p>
      </div>
-     <label htmlFor="">Order by magnitude <input type="checkbox" onToggle={handleOrderByMagnitude} /></label>
+     {/* <label htmlFor="">Order by magnitude <input type="checkbox" onToggle={handleOrderByMagnitude} /></label> */}
       {earthquakeJsx}
       
     </div>
