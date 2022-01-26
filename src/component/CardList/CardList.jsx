@@ -8,7 +8,7 @@ const CardList = () =>{
 
 const [earthquakeArr, setEarthquakeArr] = useState([]);
 const [minMagnitude, setMinMagnitude] = useState(1);
-const [orderByMagnitude, setOrderByMagnitude] = useState(false);
+// const [orderByMagnitude, setOrderByMagnitude] = useState(false);
 
   console.log(earthquakeArr);
 
@@ -48,16 +48,16 @@ const [orderByMagnitude, setOrderByMagnitude] = useState(false);
     };
 
     //function for checkbox
-    const handleOrderByMagnitude = (event) =>{
-      if(orderByMagnitude === true ){
-        !setOrderByMagnitude
-        console.log("it is false")
-      } else{
-        !setOrderByMagnitude
-        console.log("it is true")
-      }
+    // const handleOrderByMagnitude = (event) =>{
+    //   if(orderByMagnitude === true ){
+    //     !setOrderByMagnitude
+    //     console.log("it is false")
+    //   } else{
+    //     !setOrderByMagnitude
+    //     console.log("it is true")
+    //   }
       // setOrderByMagnitude(event.target.value)
-    }
+    // }
 
   return(
     <div className="cardList">
