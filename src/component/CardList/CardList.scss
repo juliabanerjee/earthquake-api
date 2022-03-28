@@ -15,8 +15,12 @@
     width: 100vw;
     padding: 0.5rem;
     border: 1px solid grey;
-   .cardList__filters__magnitude{
+   &__magnitude{
      margin-right: 2rem;
+     color: #c9c4c4;
+   }
+   &__display{
+    color: #c9c4c4;
    }
   }
 }
@@ -30,9 +34,7 @@
     width: 100vw;
     padding: 2rem;
     border: 1px solid grey;
-   .cardList__filters__magnitude{
-     margin-right: 2rem;
-   }
+   
   }
 }
 }

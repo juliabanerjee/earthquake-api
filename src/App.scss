@@ -1,15 +1,16 @@
 @use "./assets/reset" as *;
 
- .App{
+ .app{
 //   background-image: radial-gradient(
 // #d95b5c, #e9927e, #f1e874, #7a9fd3);
 background-image: radial-gradient(
   #720805,
   #1548e0);
-  .h1{
+  &__h1{
     display: flex;
     justify-content: center;
     margin: 1rem;
+    color: #979595;
   }
   
 }
