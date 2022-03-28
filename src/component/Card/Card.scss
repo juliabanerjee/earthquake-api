@@ -1,56 +1,72 @@
 @use "../../assets/_variables" as *;
 @use "../../assets/_reset" as *;
-.card{
-background-color: $mapgreen;
-border: 2px solid $mapblue;
-width: 100vw;
-height: 60vh;
-font-size: 1rem;
-text-align: left;
-border-radius: 10px;
+.card {
+  background-color: $mapgreen;
+  border: 2px solid $mapblue;
+  width: 80vw;
+  height: 60vh;
+  text-align: left;
+  border-radius: 10px;
 
-  .card__section1{
-    height: 37vh;
-  text-align: center;
-&__image{
-  margin-top: 1rem;
-  height: 200px;
-  width: 200px;
-}
-&__h2{
-  margin-left: 2rem;
-  margin-right: 2rem;
-}
+  &__container1 {
+    height: 10vh;
+    text-align: center;
+    font-size: medium;
 
+    &__h2 {
+      margin-left: 1rem;
+      margin-right: 1rem;
+      margin-top: 0.5rem;
+    }
   }
-  .card__p{
+  &__container2 {
+    display: flex;
+    justify-content: center;
+    height: 22vh;
+    &__image {
+      margin-top: 1rem;
+    }
+  }
+
+  &__container3 {
+    height: 28vh;
     margin-left: 2rem;
     margin-right: 2rem;
-    margin-top: 1rem;
-  }
-.card__further-info{
-  overflow-wrap: break-word;
-  color: blue;
+    margin-top: 1.5rem;
 
-  &:hover{
-    color: white;
-    cursor: grab;
+    &__p {
+      margin-top: 1rem;
+    }
+    &__further-info {
+      overflow-wrap: break-word;
+      color: blue;
+
+      &:hover {
+        color: white;
+        cursor: grab;
+      }
+    }
   }
 }
 
-  
-};
-
-@media only screen and (min-width:768px) {
-
-  .card{
-
+@media only screen and (min-width: 768px) {
+  .card {
     width: 20vw;
     height: 50vh;
 
-    .card__section1{
-      height: 30vh
+    &__container1{
+      height: 8vh;
+      &__h2{
+        font-size: 1.2rem
+      }
+    }
+
+    &__container2 {
+      height: 20vh;
+    }
+    &__container3 {
+      height: 20vh;
+      margin-top: 1rem;
     }
   }
-  
 }
